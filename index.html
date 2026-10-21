@@ -205,13 +205,48 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    document.getElementById("bookingForm").addEventListener("submit",
-      function(event) {
-        event.preventDefault();
-        document.getElementById("message").textContent =
-          "यह डेमो है। आपका अनुरोध सेव नहीं हुआ है।";
-      });
-  </script>
+
+const SUPABASE_URL = "https://auxhnfxcdgtpahdgeahr.supabase.co";
+const SUPABASE_KEY = "यहाँ_अपनी_Publishable_Key_डालें";
+
+document.getElementById("bookingForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const message = document.getElementById("message");
+  message.textContent = "अनुरोध भेजा जा रहा है...";
+
+  const studentName = document.getElementById("studentName").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const shift = document.getElementById("shift").value;
+
+  try {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/seat_bookings`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_KEY,
+        "Authorization": `Bearer ${SUPABASE_KEY}`,
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify({
+        student_name: studentName,
+        phone: phone,
+        shift: shift
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error("Booking failed: " + await response.text());
+    }
+
+    message.textContent = "आपका अनुरोध सफलतापूर्वक भेज दिया गया!";
+    document.getElementById("bookingForm").reset();
+  } catch (error) {
+    message.textContent = "अनुरोध नहीं भेजा गया। कृपया दोबारा कोशिश करें।";
+    console.error(error);
+  }
+});
+        </script>
 </body>
   </html>
   
