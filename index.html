@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123c32">
+  <title>Aadi Library | Arrah</title>
+  <meta name="description" content="Aadi Library, Arrah — विद्यार्थियों के लिए शांत अध्ययन वातावरण और बेहतर सुविधाएँ।">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #24332d;
+      background: #f6f8f5;
+      line-height: 1.6;
+    }
+    header {
+      background: #123c32;
+      color: white;
+      padding: 16px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand { font-size: 23px; font-weight: bold; }
+    nav { display: flex; gap: 16px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; }
+    .hero {
+      padding: 70px 6%;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #123c32, #24775b);
+    }
+    .hero h1 { font-size: clamp(32px, 6vw, 52px); margin-bottom: 14px; }
+    .hero p { max-width: 650px; margin: 0 auto 25px; }
+    .btn {
+      display: inline-block;
+      background: #f2c66d;
+      color: #17382d;
+      padding: 11px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    section { padding: 45px 6%; }
+    .section-title { text-align: center; margin-bottom: 25px; }
+    .section-title h2 { color: #164b3b; font-size: 29px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      padding: 23px;
+      border-radius: 13px;
+      box-shadow: 0 3px 14px #163c3210;
+    }
+    .card h3 { color: #176348; margin-bottom: 8px; }
+    .form-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px #163c3210;
+    }
+    label { display: block; margin: 13px 0 5px; font-weight: bold; }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5ce;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+    form .btn { margin-top: 18px; width: 100%; }
+    .notice { font-size: 13px; color: #5d6b63; margin-top: 12px; }
+    #message { margin-top: 15px; font-weight: bold; }
+    footer {
+      background: #123c32;
+      color: white;
+      text-align: center;
+      padding: 25px 6%;
+    }
+    footer a { color: #f2c66d; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">📚 Aadi Library</div>
+    <nav>
+      <a href="#home">होम</a>
+      <a href="#about">हमारे बारे में</a>
+      <a href="#facilities">सुविधाएँ</a>
+      <a href="#booking">सीट बुकिंग</a>
+      <a href="#login">लॉगिन</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Aadi Library, Arrah</h1>
+      <p>आपके सपनों और सफलता के बीच एक बेहतर अध्ययन स्थान।
+        शांत वातावरण में पढ़ें, सीखें और अपने लक्ष्य की ओर बढ़ें।</p>
+      <a class="btn" href="#booking">सीट बुकिंग के लिए पूछें</a>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>हमारे बारे में</h2>
+        <p>विद्यार्थियों के लिए अध्ययन का सुविधाजनक वातावरण।</p>
+      </div>
+      <div class="card">
+        <h3>Aadi Library में आपका स्वागत है</h3>
+        <p>यहाँ विद्यार्थी अपनी पढ़ाई और प्रतियोगी परीक्षाओं की तैयारी
+          पर ध्यान दे सकते हैं। लाइब्रेरी का सही पता, समय और नियम
+          प्रबंधन द्वारा यहाँ अपडेट किए जा सकते हैं।</p>
+      </div>
+    </section>
+
+    <section id="facilities">
+      <div class="section-title">
+        <h2>हमारी सुविधाएँ</h2>
+        <p>पढ़ाई को सुविधाजनक बनाने के लिए।</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>📖 अध्ययन स्थान</h3>
+          <p>शांत और व्यवस्थित पढ़ाई के लिए स्थान।</p>
+        </div>
+        <div class="card">
+          <h3>🪑 सीट बुकिंग</h3>
+          <p>सीट के लिए अपनी जानकारी भेजकर अनुरोध करें।</p>
+        </div>
+        <div class="card">
+          <h3>👨‍🎓 विद्यार्थी सहायता</h3>
+          <p>लाइब्रेरी प्रवेश और सुविधाओं की जानकारी।</p>
+        </div>
+        <div class="card">
+          <h3>📱 डिजिटल प्रबंधन</h3>
+          <p>भविष्य में ऑनलाइन रिकॉर्ड और उपस्थिति की सुविधा।</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="section-title">
+        <h2>सीट बुकिंग अनुरोध</h2>
+        <p>अपनी जानकारी भरें। यह डेमो फॉर्म अभी डेटा सेव नहीं करता।</p>
+      </div>
+      <div class="form-box">
+        <form id="bookingForm">
+          <label for="studentName">विद्यार्थी का नाम</label>
+          <input id="studentName" name="studentName"
+            autocomplete="name" required maxlength="80"
+            placeholder="अपना नाम लिखें">
+
+          <label for="phone">मोबाइल नंबर</label>
+          <input id="phone" name="phone" type="tel"
+            autocomplete="tel" required
+            pattern="[0-9]{10}" maxlength="10"
+            placeholder="10 अंकों का नंबर">
+
+          <label for="shift">पसंदीदा समय</label>
+          <select id="shift" name="shift" required>
+            <option value="">समय चुनें</option>
+            <option>सुबह</option>
+            <option>दोपहर</option>
+            <option>शाम</option>
+          </select>
+
+          <button class="btn" type="submit">अनुरोध देखें</button>
+          <p id="message" role="status" aria-live="polite"></p>
+          <p class="notice">यह केवल डेमो है। अनुरोध लाइब्रेरी तक नहीं पहुँचता
+            और सीट की पुष्टि नहीं करता।</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="login">
+      <div class="section-title">
+        <h2>विद्यार्थी लॉगिन</h2>
+        <p>वास्तविक लॉगिन सुविधा डेटाबेस और सुरक्षित प्रमाणीकरण जोड़ने के बाद चालू होगी।</p>
+      </div>
+      <div class="form-box">
+        <p>विद्यार्थी लॉगिन और एडमिन पैनल अभी तैयार किए जाने बाकी हैं।</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Aadi Library, Arrah</h3>
+    <p>पढ़ें, सीखें और आगे बढ़ें।</p>
+    <p>पता: <span>अपना सही पता यहाँ जोड़ें</span></p>
+    <p>© <span id="year"></span> Aadi Library</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("bookingForm").addEventListener("submit",
+      function(event) {
+        event.preventDefault();
+        document.getElementById("message").textContent =
+          "यह डेमो है। आपका अनुरोध सेव नहीं हुआ है।";
+      });
+  </script>
+</body>
+  </html>
+  
